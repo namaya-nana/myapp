@@ -5,7 +5,9 @@ html, body{
     width:100vw;
     height:100vh;
     background: url(assets/images/fondo.png) no-repeat center; /*inserta la imagen del fondo*/
-    
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Carter One', cursive;
+    font-family: 'Original Surfer', cursive;
 }
 .fondoGrape{
      background-color: #199cb1 !important;
