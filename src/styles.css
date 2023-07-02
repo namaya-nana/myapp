@@ -1,18 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 html, body{
-    display: table;
-    color: white !important;
+    /*display: table;*/
+    color: rgb(5, 0, 0) !important; /*letra negra*/
     width:100vw;
     height:100vh;
+    background: url(assets/images/fondo.png) no-repeat center; /*inserta la imagen del fondo*/
+    
 }
 .fondoGrape{
-     background-color: #D7EAED !important;;
-}
+     background-color: #199cb1 !important;
+     background: url(assets/images/fondo.png) no-repeat center; /*inserta la imagen del fondo*/
+     background-size: cover;
+    }
 
 .tituloJuego{
     text-align: center;
     margin: 5px 0px;
-    color: #52465E;
+    color: #28044d;
     font-family: fantasy;
 }
 
@@ -23,6 +27,7 @@ html, body{
     margin: 20px auto;
     padding: 20px;
     max-width: 800px !important;
-    background-color: #52465E;
+    background: rgba(255,255,255,.7);
+    /*background-color: #fafafa;*/
     border-radius: 30px;
 }
