@@ -9,8 +9,8 @@ import { PalabraService } from 'src/app/providers/palabra.service';
 })
 export class IngresarPalabraComponent {
 
-  arrCoincidencias: string[] = []; // esto es para corregir!
-  arrAdivinar: string[] = [];
+  arrCoincidencias: string[] = []; // letras adivinadas hasta el momento
+  arrAdivinar: string[] = []; //palabra a adivinar
   intentos: string[] = [];
   imagen = [
     '../../../assets/images/img1.png',
@@ -24,7 +24,7 @@ export class IngresarPalabraComponent {
   title = 'ahorcadoAngular';
   palabraAdivinar= '';
   letra = '';
-  idx = 0;
+  indice = 0;
   input = true;
   juegoTerminado = false;
   juegoGanado = false;
@@ -68,8 +68,8 @@ export class IngresarPalabraComponent {
   }
 
   vidas(){
-    this.idx ++;
-    console.log(this.idx);
+    this.indice ++;
+    console.log(this.indice);
   }
 
   reset(){
@@ -79,7 +79,7 @@ export class IngresarPalabraComponent {
   }
 
   gameOver(){
-    if(this.idx > 5){
+    if(this.indice > 5){
       this.juegoTerminado = true;
       this.input = false;
     }else{

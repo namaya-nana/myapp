@@ -1,7 +1,7 @@
 <h3>Adivina la palabra!!</h3>
 
-<div class="card text-white bg-secondary mb-3" style="max-width: 35rem;">
-  <img [src]="imagen[idx]" class="card-img-top" height="200px" >
+<div class="card text-black" style="max-width: 35rem;">
+  <img [src]="imagen[indice]" class="card-img-top" height="200px" >
   <div class="card-body">
     <h5 class="card-title">{{arrCoincidencias | json}}</h5>
 
@@ -10,7 +10,7 @@
 
   <form>
     <div *ngIf="input">
-        <label>
+        <label >
           Ingresa una letra...
         </label>
         <br>

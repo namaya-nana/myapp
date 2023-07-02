@@ -12,14 +12,8 @@ export class PalabraService {
 
   constructor(private afs: AngularFireDatabase) {
 
-    // this.getConexion().then( ()=>{
-    //   console.log('conexion exitosa!');
-    //   this.getBD();
-    // }).catch( (err)=>{
-    //   console.log(err);
-    // });
   }
-
+  //muestra contenido del arreglo
   getBD(){
     console.log(this.palabras);
     return this.palabras;
@@ -38,27 +32,32 @@ export class PalabraService {
      });
   }
 
+  //agrega la palabra nueva a la base de datos. 
   updateBD(){
     return this.afs.object('palabras/').set(this.palabras);
   }
 
+  //devuelve un arreglo del tipo palabra
   getArrPalabras(): Palabra[]{
     return this.palabras;
   }
 
+  //agrega la palabra nueva a la base
   agregarPalabra(palabra: string){
     const p = new Palabra(palabra);
     this.palabras.push(p);
     return this.updateBD();
   }
 
+  //obtengo la palabra con el indice indicado
   getPalabraAleatoria(): string{
-    const idx = this.idxAleatorio(this.palabras.length);
-    console.log(this.palabras[idx].palabra);
-    return this.palabras[idx].palabra;
+    const indice = this.funcionAleatorio(this.palabras.length);
+    console.log(this.palabras[indice].palabra);
+    return this.palabras[indice].palabra;
   }
 
-  idxAleatorio(max: number): number{
+  //obtengo un numero aleatorio 
+  funcionAleatorio(max: number): number{
     return Math.floor(Math.random() * max);
   }
 
